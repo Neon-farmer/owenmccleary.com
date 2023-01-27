@@ -1,10 +1,23 @@
 @charset "UTF-8";
+
+
 /* site-wide styles */
+
+html {
+    /* color variables */ 
+    --libertyblue: #485696;
+    --olivegrey: #37392E;
+    --bone: #ECE2D0;
+    --rufous: #972D07;
+    --oldrose: #C97B84;
+}
+
+
 
 body {
 	margin: 0 auto;
 	width: 100%;
-    background-color: #37392E;
+    background-color: var(--olivegrey);
 }
 
 body::-webkit-scrollbar {
@@ -27,9 +40,21 @@ html body h1 {
 /* Logos */
 
 .fa-address-card {
-    color: #ECE2D0;
-    size: 30px;
+    color: var(--bone);
+
 }
+
+.fa-folder-open {
+    color: var(--bone);
+
+}
+
+.fa-envelope {
+    color: var(--bone);
+
+}
+
+
 
 
 
@@ -60,10 +85,10 @@ nav > ul > li {
 
 nav > ul > li > a, nav > ul > li > a:visited  {
     text-decoration: none;
-    color: #ECE2D0;
+    color: var(--bone);
     font-size: 30px;
 }
 
 nav > ul > li:hover {
-    background-color: #972D07;
+    background-color: var(--rufous);
 }
