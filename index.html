@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/d458697f00.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d458697f00.js" crossorigin="anonymous"></script> 
+    <script>
+        window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+      
+        loader.classList.add("loader--hidden");
+      
+        loader.addEventListener("transitionend", () => {
+          document.body.removeChild(loader);
+        });
+      });
+    </script>
 </head>
 
 <body>
+
+    <div class="loader"></div>
+
     <nav class="navbar">
         <ul class="nav-list">
             <li class="nav-list-item">
@@ -24,6 +38,8 @@
         </ul>
     </nav>
     <!-- <img class="profile-pic" src="owen.png" width="500px"> -->
+
+
 </body>
 
 
