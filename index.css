@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 
+
+
 /* site-wide styles */
 
 html {
@@ -13,9 +15,9 @@ html {
 
 
     /* element variables */
+    --body-bg-color:var(--bone);
     --nav-bg-color:var(--olivegrey);
     --nav-item-color:var(--bone);
-    --body-bg-color:var(--bone);
     --nav-hover-color:var(--libertyblue);
 }
 
@@ -46,6 +48,11 @@ html body h1 {
 
 /* Logos */
 
+.fa-regular {
+    color: var(--bone);
+    max-height: 25px;
+}
+
 .fa-address-card {
     color: var(--bone);
 }
@@ -58,19 +65,11 @@ html body h1 {
     color: var(--bone);
 }
 
-.fa-envelope {
-    color: var(--bone);
-}
-
-
-
-
-
 
 /* nav menu */
 
 
-nav {
+.navbar {
     padding: 0px;
     background-color: var(--nav-bg-color);
     border-color: black;
@@ -79,47 +78,62 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: width 600ms ease;
-    z-index: 1;
+    width: 4rem;
+    overflow: hidden;
+    transition: width 200ms ease-in-out;
 }
 
-nav > ul {
+.navbar:hover {
+    width: 12rem;
+}
+
+.nav-list {
     padding: 0px;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
-nav > ul > li {
+.nav-list-item {
     list-style: none;
     padding: 15px;
     text-decoration: none;
     color: var(--nav-item-color);
     font-size: 25px;
-    transition: 600ms ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+    background-color: var(--nav-bg-color);
 }
 
-/* nav > ul > li > a, nav > ul > li > a:visited  {
+.nav-link, .navlink:visited  {
+    text-decoration: none;
+    display: flex;
+}
 
-} */
-
-nav > ul > li:hover{
+.nav-list-item:hover {
     background-color: var(--nav-hover-color);
+    transition: background-color 600ms ease-in-out;
 }
 
-nav > ul > li:hover {
-    padding-right: 200px;
-    transition: 600ms;
-}
 
-.nav-text {
-    opacity: 0;
+.nav-link-text {
+    color: var(--nav-item-color);
+    text-decoration: none;
     display: none;
-    columns: var(--nav-item-color);
+    max-height: 25px;
 }
 
-.nav-text:hover {
-    display: block;
-    opacity: 1;
+.navbar:hover .nav-link-text {
+    text-decoration: none;
+    align-items: left;
+    margin-left: 1rem;
+    display:block;
+    display:flexbox;
 }
+
 
 /* Profile Picture */
 
