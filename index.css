@@ -10,6 +10,13 @@ html {
     --bone: #ECE2D0;
     --rufous: #972D07;
     --oldrose: #C97B84;
+
+
+    /* element variables */
+    --nav-bg-color:var(--olivegrey);
+    --nav-item-color:var(--bone);
+    --body-bg-color:var(--bone);
+    --nav-hover-color:var(--libertyblue);
 }
 
 
@@ -17,7 +24,7 @@ html {
 body {
 	margin: 0 auto;
 	width: 100%;
-    background-color: var(--olivegrey);
+    background-color: var(--body-bg-color);
 }
 
 body::-webkit-scrollbar {
@@ -41,17 +48,18 @@ html body h1 {
 
 .fa-address-card {
     color: var(--bone);
-
 }
 
 .fa-folder-open {
     color: var(--bone);
-
 }
 
 .fa-envelope {
     color: var(--bone);
+}
 
+.fa-envelope {
+    color: var(--bone);
 }
 
 
@@ -64,13 +72,15 @@ html body h1 {
 
 nav {
     padding: 0px;
-    background-color: #485696;
+    background-color: var(--nav-bg-color);
     border-color: black;
     height: 100vh;
     position: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: width 600ms ease;
+    z-index: 1;
 }
 
 nav > ul {
@@ -80,15 +90,40 @@ nav > ul {
 
 nav > ul > li {
     list-style: none;
-    padding: 20px 40px 20px 20px;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--nav-item-color);
+    font-size: 25px;
+    transition: 600ms ease;
 }
 
-nav > ul > li > a, nav > ul > li > a:visited  {
-    text-decoration: none;
-    color: var(--bone);
-    font-size: 30px;
+/* nav > ul > li > a, nav > ul > li > a:visited  {
+
+} */
+
+nav > ul > li:hover{
+    background-color: var(--nav-hover-color);
 }
 
 nav > ul > li:hover {
-    background-color: var(--rufous);
+    padding-right: 200px;
+    transition: 600ms;
+}
+
+.nav-text {
+    opacity: 0;
+    display: none;
+    columns: var(--nav-item-color);
+}
+
+.nav-text:hover {
+    display: block;
+    opacity: 1;
+}
+
+/* Profile Picture */
+
+.profile-pic {
+    left: 600px;
+    position: relative; 
 }
