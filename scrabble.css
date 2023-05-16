@@ -90,7 +90,7 @@ form#letterInput input.letterBox {
 }
 
 form#letterInput input.letterBox:not(:placeholder-shown) {
-    background-image: url("images/blank-tile.jpg");
+    background-image: url("Images/blank-tile.jpg");
     background-size: cover;
   }
 
