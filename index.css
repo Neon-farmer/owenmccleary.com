@@ -63,16 +63,6 @@ body {
     background-color: var(--body-bg-color);
 }
 
-body::-webkit-scrollbar {
-    width: 10%;
-}
-body::-webkit-scrollbar-track {
-    background-color: black;
-}
-body::-webkit-scrollbar {
-    background: blue;
-}
-
 html body h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -93,6 +83,10 @@ html body h1 {
 }
 
 .fa-envelope {
+    color: var(--bone);
+}
+
+.fa-sharp {
     color: var(--bone);
 }
 

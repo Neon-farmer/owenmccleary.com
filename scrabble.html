@@ -3,10 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="" width="" initial-scale=1.0">
+    <meta name="viewport" content="" width="" initial-scale="1.0">
     <title>Scrabble</title>
+
+    <link rel="stylesheet" href="scrabble.css">
+    <script src="https://kit.fontawesome.com/d458697f00.js" crossorigin="anonymous"></script> 
+    <script src="loader.js"></script>
+    <script src="scrabble.js" delay></script>
+    <script src="fieldJump.js" delay></script>
 </head>
-<body>
-    Scrabble
+<body onload="getAllWords();">
+    
+    <div class="loader"></div>
+    
+        <form action="#" onsubmit="return filterWords(letterInput);" id="letterInput">
+            <input class='letterBox' type="text" id="inputLetters1" maxlength="1" oninput="nextLetter(this, 'inputLetters2')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters2" maxlength="1" oninput="nextLetter(this, 'inputLetters3')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters3" maxlength="1" oninput="nextLetter(this, 'inputLetters4')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters4" maxlength="1" oninput="nextLetter(this, 'inputLetters5')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters5" maxlength="1" oninput="nextLetter(this, 'inputLetters6')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters6" maxlength="1" oninput="nextLetter(this, 'inputLetters7')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters7" maxlength="1" oninput="nextLetter(this, 'inputLetters8')" onClick="this.select();" placeholder="-">
+            <input class='letterBox' type="text" id="inputLetters8" maxlength="1" oninput="nextLetter(this, 'submit')" onClick="this.select();" placeholder="-">
+            <input class='button' type="submit" id="submit" value="Submit">
+            <input class='button' type="reset" id="clear" value="Clear">
+        </form>
+        
+
+        
+         <div id="results">
+            
+         </div>   
+        
+
 </body>
 </html>
