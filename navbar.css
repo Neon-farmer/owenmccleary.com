@@ -1,0 +1,107 @@
+/* Icons */
+
+.fa-regular {
+    color: var(--bone);
+    max-height: 25px;
+}
+
+.fa-address-card {
+    color: var(--bone);
+}
+
+.fa-folder-open {
+    color: var(--bone);
+}
+
+.fa-envelope {
+    color: var(--bone);
+}
+
+.fa-sharp {
+    color: var(--bone);
+}
+
+/* nav menu */
+
+html {
+    /* color variables */ 
+    --libertyblue: #485696;
+    --olivegrey: #37392E;
+    --bone: #ECE2D0;
+    --rufous: #972D07;
+    --oldrose: #C97B84;
+
+
+    /* element variables */
+    --body-bg-color:var(--bone);
+    --nav-bg-color:var(--olivegrey);
+    --nav-item-color:var(--bone);
+    --nav-hover-color:var(--libertyblue);
+}
+
+.navbar {
+    margin-top: 0;
+    padding: 0px;
+    background-color: var(--nav-bg-color);
+    border-color: black;
+    height: 100vh;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3.8rem;
+    overflow: hidden;
+    transition: width 200ms ease-in-out;
+}
+
+.navbar:hover {
+    width: 12rem;
+}
+
+.nav-list {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.nav-list-item {
+    list-style: none;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--nav-item-color);
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+    background-color: var(--nav-bg-color);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50;
+}
+
+.nav-link, .navlink:visited  {
+    text-decoration: none;
+    display: flex;
+}
+
+.nav-list-item:hover {
+    background-color: var(--nav-hover-color);
+    transition: background-color 300ms ease-in-out;
+}
+
+.nav-link-text {
+    color: var(--nav-item-color);
+    text-decoration: none;
+    display: none;
+    max-height: 25px;
+}
+
+.navbar:hover .nav-link-text {
+    text-decoration: none;
+    align-items: left;
+    margin-left: 1rem;
+    display:block;
+    display:flexbox;
+}

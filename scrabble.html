@@ -7,15 +7,34 @@
     <title>Scrabble</title>
 
     <link rel="stylesheet" href="scrabble.css">
+    <link rel="stylesheet" href="navbar.css">
     <script src="https://kit.fontawesome.com/d458697f00.js" crossorigin="anonymous"></script> 
     <script src="loader.js"></script>
     <script src="scrabble.js" delay></script>
     <script src="fieldJump.js" delay></script>
 </head>
+
 <body onload="getAllWords();">
-    
     <div class="loader"></div>
     
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a class="nav-link" href=#><i class="fa-regular fa-address-card"></i><span class="nav-link-text"> About</span></a>
+            </li>
+            <li class="nav-list-item">
+                <a class="nav-link" href=#><i class="fa-regular fa-folder-open"></i><span class="nav-link-text"> Projects</span></a>
+            </li>
+            <li class="nav-list-item">
+                <a class="nav-link" href=#><i class="fa-regular fa-envelope"></i><span class="nav-link-text"> Contact</span></a>
+            </li>
+            <li class="nav-list-item">
+                <a class="nav-link" href=scrabble.html><i class="fa-regular fa-solid fa-book"></i><span class="nav-link-text"> Scrabble </span></a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div id="center">
         <form action="#" onsubmit="return filterWords();" id="letterInput">
             <input class='letterBox' type="text" id="inputLetters1" maxlength="1" oninput="nextLetter(this, 'inputLetters2')" onClick="this.select();" placeholder="-">
             <input class='letterBox' type="text" id="inputLetters2" maxlength="1" oninput="nextLetter(this, 'inputLetters3')" onClick="this.select();" placeholder="-">
@@ -29,11 +48,14 @@
             <input class='button' type="reset" id="clear" value="Clear">
         </form>
         
-
+    
         
          <div id="results">
              <h1 id="intro">Enter Your Letters Above to Begin!</h1>
         </div>   
+
+    </div>
+    
         
 
 </body>
