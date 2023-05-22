@@ -11,8 +11,9 @@ html {
     --oldrose: #C97B84;
     
     background-image: url("Images/wood-bg.jpg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment:fixed;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
     display: -webkit-flex;
     display: flex;   
     -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+    flex-flow: column;
     justify-content: center;
     min-width: 650px;
     max-width: 1020px;
@@ -104,7 +105,28 @@ form#letterInput input.button {
     margin: 2.5px;
     margin-top: 5px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
+    font-size: larger;
     color: #37392E;
 }
 
+form#letterInput input.button:hover {
+    background-color: var(--libertyblue);
+    color: var(--bone);
+}
+
+form#letterInput input.button:active {
+    background-color: var(--bone);
+    color: var(--olivegrey);
+}
+
+div#results {
+    width: 58%;
+    margin: 30px auto;
+    background-color: #37392E;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px;
+}

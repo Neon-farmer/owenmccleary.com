@@ -18,14 +18,27 @@ function getAllWords() {
 }
 
 // testcase
-var letterInput = ['g', 'a', 'l', 'h'];
+
 
 // Declare filtered word array
 var filteredWords = [];
 
 // Filter and return array of words base on letter input
-function filterWords(inputLetters, isLocked) {
+function filterWords() {
     filteredWords = [];
+    
+    var l1 = document.getElementById("inputLetters1").value;
+    var l2 = document.getElementById("inputLetters2").value;
+    var l3 = document.getElementById("inputLetters3").value;
+    var l4 = document.getElementById("inputLetters4").value;
+    var l5 = document.getElementById("inputLetters5").value;
+    var l6 = document.getElementById("inputLetters6").value;
+    var l7 = document.getElementById("inputLetters7").value;
+    var l8 = document.getElementById("inputLetters8").value;
+
+
+    var inputLetters = [l1, l2, l3, l4, l5, l5, l6, l7, l8];
+    console.log(inputLetters);
 
     // Loop through words array
     for (var i = 0; i < words.length; i++) {

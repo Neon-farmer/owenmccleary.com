@@ -16,7 +16,7 @@
     
     <div class="loader"></div>
     
-        <form action="#" onsubmit="return filterWords(letterInput);" id="letterInput">
+        <form action="#" onsubmit="return filterWords();" id="letterInput">
             <input class='letterBox' type="text" id="inputLetters1" maxlength="1" oninput="nextLetter(this, 'inputLetters2')" onClick="this.select();" placeholder="-">
             <input class='letterBox' type="text" id="inputLetters2" maxlength="1" oninput="nextLetter(this, 'inputLetters3')" onClick="this.select();" placeholder="-">
             <input class='letterBox' type="text" id="inputLetters3" maxlength="1" oninput="nextLetter(this, 'inputLetters4')" onClick="this.select();" placeholder="-">
