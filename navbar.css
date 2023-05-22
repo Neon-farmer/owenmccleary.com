@@ -78,7 +78,7 @@ html {
     height: 2rem;
     background-color: var(--nav-bg-color);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 50;
+
 }
 
 .nav-link, .navlink:visited  {

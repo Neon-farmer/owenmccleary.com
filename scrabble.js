@@ -80,30 +80,73 @@ function filterWords() {
         }
     }
     console.table(filteredWords);
-    buildTable();
+
+    // Generate html to display filtered word list
+    setTimeout(buildTable, 100);
 }
 
-// Generate html to display filtered word list
-setTimeout(buildTable, 100);
 
 function buildTable() {
 
-    var inner = "";
+    var inner = "<ul>";
     filteredWords.forEach(word => {
-        inner += "<h1>" + word + "</h1>";
-        inner += "<cr>";
+        if (word.length == 8){
+            inner += "<li>" + word + "</li>";
+        }
     });
-
+    inner += "</ul><ul>"
+    filteredWords.forEach(word => {
+        if (word.length == 7){
+            inner += "<li>" + word + "</li>";
+        }
+    });
+    inner += "</ul><ul>"
+    filteredWords.forEach(word => {
+        if (word.length == 6){
+            inner += "<li>" + word + "</li>";
+        }
+    });
+    inner += "</ul><ul>"
+    filteredWords.forEach(word => {
+        if (word.length == 5){
+            inner += "<li>" + word + "</li>";
+        }
+    });
+    inner += "</ul><ul>"
+    filteredWords.forEach(word => {
+        if (word.length == 4){
+            inner += "<li>" + word + "</li>";
+        }
+    });
+    inner += "</ul><ul>"
+    filteredWords.forEach(word => {
+        if (word.length == 3){
+            inner += "<li>" + word + "</li>";
+        }
+    });
+    inner += "</ul><ul>"
+    filteredWords.forEach(word => {
+        if (word.length == 2){
+            inner += "<li>" + word + "</li>";
+        }
+    });
+    inner += "</ul>"
+    
+    
     // Get the results div
     var resultsDiv = document.getElementById("results");
-
-    if (filteredWords.length > 0) {
-        // Clear the existing HTML content
-        resultsDiv.innerHTML = "";
     
-        // Add the new content to the results div
-        resultsDiv.innerHTML = inner;
-
+    console.log('ran');
+    
+    
+    if (filteredWords.length < 1) {
+        inner = "<h1>No Valid Words.</h1>";
     }
+
+    // Clear the existing HTML content
+    resultsDiv.innerHTML = "";
+
+    // Add the new content to the results div
+    resultsDiv.innerHTML = inner;
 }
 
