@@ -90,16 +90,20 @@ function buildTable() {
 
     var inner = "";
     filteredWords.forEach(word => {
-        inner += "<h1>" + word + "</h1><br>";
+        inner += "<h1>" + word + "</h1>";
+        inner += "<cr>";
     });
 
     // Get the results div
     var resultsDiv = document.getElementById("results");
 
-    // Clear the existing HTML content
-    resultsDiv.innerHTML = "";
+    if (filteredWords.length > 0) {
+        // Clear the existing HTML content
+        resultsDiv.innerHTML = "";
+    
+        // Add the new content to the results div
+        resultsDiv.innerHTML = inner;
 
-    // Add the new content to the results div
-    resultsDiv.innerHTML = inner;
+    }
 }
 
