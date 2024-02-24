@@ -1,0 +1,42 @@
+.body {
+    
+}
+
+#wrapper {
+    border-radius: 30px;
+    margin: auto;
+    display: -webkit-flex;
+    display: flex;   
+    flex-flow: column;
+    align-items: center;
+    max-width: 1020px;
+    width: 100%;
+}
+
+.title2 {
+   
+}
+
+.title2 h1 {
+    font-weight: normal;
+    font-size: large;
+    margin: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+.title {
+    margin: 1rem 1rem .1rem 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.map-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    width: 90%;
+    height: auto;
+    border-radius: 1rem;
+}
